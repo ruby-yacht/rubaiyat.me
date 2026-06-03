@@ -1,7 +1,9 @@
 (function () {
+  // Any link with rel="lightbox..." opens in this local, dependency-free viewer.
   var links = Array.prototype.slice.call(document.querySelectorAll('a[rel^="lightbox"]'));
   if (!links.length) return;
 
+  // Build the overlay once, then reuse it for every gallery image on the page.
   var overlay = document.createElement('div');
   overlay.className = 'local-lightbox';
   overlay.setAttribute('role', 'dialog');
@@ -21,6 +23,7 @@
 
   function closeLightbox() {
     overlay.classList.remove('is-open');
+    // Remove the image source so the browser can stop showing the previous file.
     image.removeAttribute('src');
   }
 
@@ -28,7 +31,9 @@
     link.addEventListener('click', function (event) {
       event.preventDefault();
       image.src = link.href;
-      image.alt = link.querySelector('img') ? link.querySelector('img').alt || '' : '';
+      // Reuse the thumbnail alt text when it exists.
+      var thumbnail = link.querySelector('img');
+      image.alt = thumbnail ? thumbnail.alt || '' : '';
       overlay.classList.add('is-open');
     });
   });

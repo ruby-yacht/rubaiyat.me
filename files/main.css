@@ -1,4 +1,5 @@
 :root {
+  /* Shared theme values. Change these first for broad visual updates. */
   --site-bg: #ece7df;
   --site-paper: #fff;
   --site-ink: #242424;
@@ -166,6 +167,7 @@ blockquote {
   filter: invert(1) grayscale(1);
 }
 
+/* Shared page shells. The old HTML keeps these wrapper ids on every page. */
 #banner-wrap,
 #main-wrap,
 #footer-wrap {
@@ -192,6 +194,7 @@ blockquote {
   display: none;
 }
 
+/* Landing pages place intro text beside the page image on wide screens. */
 #banner-wrap .container.block {
   overflow: hidden;
 }
@@ -279,6 +282,7 @@ blockquote {
   display: none;
 }
 
+/* Weebly button markup is still present, but Bootstrap supplies the styling. */
 .wsite-button:not(.btn) {
   background: none !important;
   height: auto !important;
@@ -336,6 +340,7 @@ blockquote {
   margin-right: 0 !important;
 }
 
+/* Convert old table-based multi-column content into flexible columns. */
 .wsite-multicol-tr {
   display: flex;
   flex-wrap: wrap;
@@ -365,6 +370,7 @@ blockquote {
 }
 
 .imageGallery {
+  /* Gallery thumbnails resize automatically without hand-tuning each row. */
   display: grid;
   gap: 0.75rem;
   grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
@@ -402,6 +408,7 @@ blockquote {
 }
 
 .wsite-youtube-container {
+  /* Keep embedded videos responsive while preserving the usual video shape. */
   aspect-ratio: 16 / 9;
   position: relative;
   width: 100%;
@@ -416,6 +423,7 @@ blockquote {
 }
 
 .local-lightbox {
+  /* Lightbox is hidden until files/local-lightbox.js adds .is-open. */
   align-items: center;
   background: rgba(0, 0, 0, 0.86);
   bottom: 0;
@@ -507,6 +515,7 @@ blockquote {
   }
 
   .wsite-multicol-col {
+    /* On small screens, each old table column becomes a full-width row. */
     padding-left: 0 !important;
     padding-right: 0 !important;
     width: 100% !important;
