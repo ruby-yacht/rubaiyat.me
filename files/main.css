@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background: var(--site-bg) url(theme/main-bg%EF%B9%961554728839.jpg) repeat;
+  background: var(--site-bg) url(theme/page-texture.jpg) repeat;
   color: var(--site-muted);
   font-size: 1rem;
   line-height: 1.6;
@@ -257,20 +257,20 @@ blockquote {
 }
 
 .landing-page .wsite-header {
-  background-image: url(theme/banner-landing%EF%B9%961554728839.jpg);
+  background-image: url(theme/hero-default.jpg);
   height: 100%;
   min-height: 25rem;
   width: 100%;
 }
 
 .tall-header-page .wsite-header {
-  background-image: url(theme/banner-tall%EF%B9%961554728839.jpg);
+  background-image: url(theme/banner-tall.jpg);
   min-height: clamp(14rem, 34vw, 22rem);
   width: 100%;
 }
 
 .short-header-page .wsite-header {
-  background-image: url(theme/banner-short%EF%B9%961554728839.jpg);
+  background-image: url(theme/banner-short.jpg);
   min-height: clamp(9rem, 20vw, 14rem);
   width: 100%;
 }
